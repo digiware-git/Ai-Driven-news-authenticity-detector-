@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top News | AI News Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo" onclick="location.href='index.html'">
+      🧠 AI News Detector
+    </span>
+  </div>
+
+  <ul class="nav-center">
+    <li onclick="location.href='index.html'">Home</li>
+    <li class="active">Top News</li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="profile-box" id="profileBox">
+      <div class="avatar" id="avatarText">U</div>
+
+      <div class="profile-dropdown" id="profileDropdown">
+        <p id="usernameLabel"></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= RESULT MODAL ================= -->
+<div id="resultModal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="modalLabel"></h3>
+
+    <div class="confidence-bar">
+      <div id="modalBar"></div>
+    </div>
+
+    <p id="modalConfidence"></p>
+
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="app">
+  <h2>📰 Live Top News</h2>
+  <p>Click verify to check authenticity using AI</p>
+
+  <!-- 🔥 NEWS RENDERS HERE -->
+  <div id="newsContainer"></div>
+</div>
+
+<!-- ================= SCRIPTS (ORDER FIXED) ================= -->
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/top-news.js"></script>
+
+</body>
+</html>

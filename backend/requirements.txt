@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+nltk
+joblib
+pillow
+pytesseract
+opencv-python
+beautifulsoup4
+requests
+python-multipart
+rank-bm25

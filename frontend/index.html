@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI News Authenticity Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo" onclick="location.href='index.html'">🧠 AI News Detector</span>
+  </div>
+
+  <ul class="nav-center">
+    <li class="active">Home</li>
+    <li onclick="location.href='verify-text.html'">Text</li>
+    <li onclick="location.href='verify-url.html'">URL</li>
+    <li onclick="location.href='verify-image.html'">Image</li>
+    <li onclick="location.href='top-news.html'">Top News</li>
+  </ul>
+
+  <div class="nav-right">
+  
+    <div class="profile-box" id="profileBox">
+      <div class="avatar" id="avatarText">U</div>
+      <div class="profile-dropdown">
+        <p id="usernameLabel"></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HOME CONTENT ================= -->
+<div class="app">
+
+  <section class="card hero-card">
+    <h1>AI-Driven News Authenticity Detector</h1>
+    <p>
+      An intelligent system to detect <b>Fake</b>, <b>Real</b>, or <b>Uncertain</b>
+      news using Natural Language Processing, Machine Learning, and Multimodal Analysis.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🔍 What This System Does</h2>
+    <ul>
+      <li>Analyzes news text using advanced NLP techniques</li>
+      <li>Verifies news from URLs by extracting article content</li>
+      <li>Detects misleading or manipulated news images</li>
+      <li>Provides confidence score and explainable reasons</li>
+      <li>Supports multimodal fake news detection</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🧠 Model Architecture</h2>
+    <ol class="architecture">
+      <li>
+        <b>Input Layer</b>
+        <ul>
+          <li>Text input</li>
+          <li>URL input</li>
+          <li>Image input</li>
+        </ul>
+      </li>
+      <li>
+        <b>Pre-Processing</b>
+        <ul>
+          <li>Text cleaning & normalization</li>
+          <li>URL extraction</li>
+          <li>Image resizing</li>
+        </ul>
+      </li>
+      <li>
+        <b>Feature Extraction</b>
+        <ul>
+          <li>TF-IDF & embeddings</li>
+          <li>BM25 relevance</li>
+          <li>Visual features</li>
+        </ul>
+      </li>
+      <li>
+        <b>Classification</b>
+        <ul>
+          <li>REAL / FAKE / UNCERTAIN</li>
+        </ul>
+      </li>
+      <li>
+        <b>Explainability</b>
+        <ul>
+          <li>Human-readable reasons</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>🚀 Why This System Is Strong</h2>
+    <ul>
+      <li>Multimodal verification</li>
+      <li>Explainable AI</li>
+      <li>Confidence-based results</li>
+      <li>FastAPI backend</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>📌 Applications</h2>
+    <ul>
+      <li>Fake news detection</li>
+      <li>Journalism verification</li>
+      <li>Research & education</li>
+    </ul>
+  </section>
+
+</div>
+
+
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

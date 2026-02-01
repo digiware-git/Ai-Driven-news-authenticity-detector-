@@ -1,0 +1,122 @@
+.text-card {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.text-card h2 {
+  color: #7dd3fc;
+  margin-bottom: 5px;
+}
+
+.text-card p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.text-card textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.text-card button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.text-card button:hover {
+  transform: scale(1.02);
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(2,6,23,0.95);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+
+  animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.confidence-bar {
+  height: 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+#confidenceFill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+.close-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: #ef4444;
+  color: white;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

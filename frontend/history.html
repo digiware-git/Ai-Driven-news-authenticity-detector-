@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verification History | AI News Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+</head>
+
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo">🧠 AI News Detector</span>
+  </div>
+
+  <ul class="nav-center">
+    <li onclick="location.href='index.html'">Home</li>
+    <li onclick="location.href='verify-text.html'">Text</li>
+    <li onclick="location.href='verify-url.html'">URL</li>
+    <li onclick="location.href='verify-image.html'">Image</li>
+    <li class="active">History</li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="profile-box">
+      <div class="avatar" id="avatarText">U</div>
+      <div class="profile-dropdown">
+        <p id="usernameLabel"></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ CONTENT ============ -->
+<div class="app">
+
+  <section class="card">
+    <h2>🕒 Unified Verification History</h2>
+    <p>All your Text, URL and Image verifications in one place</p>
+  </section>
+
+  <section class="card">
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Result</th>
+          <th>Confidence</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody">
+        <!-- JS will inject rows -->
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/script.js"></script>
+<script src="js/history.js"></script>
+
+</body>
+</html>

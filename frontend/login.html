@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | AI News Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ CORRECT PATH -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="auth-card">
+
+  <h2 id="formTitle">Sign In to continue</h2>
+
+  <input type="text" id="username" placeholder="Username" />
+
+  <input
+    type="email"
+    id="email"
+    placeholder="Email"
+    class="hidden"
+  />
+
+  <div style="position:relative;">
+    <input type="password" id="password" placeholder="Password" />
+    <span onclick="togglePassword()" style="cursor:pointer;">👁</span>
+  </div>
+
+  <!-- 🔥 type MUST be button -->
+  <button type="button" onclick="submitAuth()">Continue</button>
+
+  <p id="switchText">
+    Don't have an account?
+    <span onclick="toggleMode()" style="color:blue; cursor:pointer;">
+      Sign Up
+    </span>
+  </p>
+
+</div>
+
+<!-- ✅ JS PATH FIX -->
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

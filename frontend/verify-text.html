@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verify Text | AI News Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo" onclick="location.href='index.html'">
+      🧠 AI News Detector
+    </span>
+  </div>
+
+  <ul class="nav-center">
+    <li onclick="location.href='index.html'">Home</li>
+    <li class="active">Text</li>
+    <li onclick="location.href='verify-url.html'">URL</li>
+    <li onclick="location.href='verify-image.html'">Image</li>
+    <li onclick="location.href='top-news.html'">Top News</li>
+  </ul>
+
+  <div class="nav-right">
+    <!-- ✅ FIX: id added -->
+    <div class="profile-box" id="profileBox">
+      <div class="avatar" id="avatarText">U</div>
+      <div class="profile-dropdown">
+        <p id="usernameLabel"></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<div class="app">
+
+  <!-- TEXT VERIFY -->
+  <section class="card" id="textSection">
+    <h2>📝 Verify News Text</h2>
+    <p>Paste full news article to check authenticity using AI</p>
+
+    <textarea
+      id="textInput"
+      placeholder="Paste full news article text..."
+    ></textarea>
+
+    <button onclick="verifyText()">Verify with AI</button>
+  </section>
+
+  <!-- ================= RESULT ================= -->
+  <section id="resultBox" class="card hidden">
+    <div class="result-header">
+      <h2 id="resultLabel"></h2>
+      <span id="trustedBadge" class="badge hidden">✔ Trusted Source</span>
+    </div>
+
+    <div class="progress">
+      <div id="confidenceFill"></div>
+    </div>
+
+    <p id="confidenceText"></p>
+
+    <h3>Why this result?</h3>
+    <ul id="explanationList"></ul>
+  </section>
+
+  <!-- ================= HISTORY ================= -->
+  <section class="card">
+    <h2>🕒 Verification History</h2>
+    <ul id="historyList" class="history"></ul>
+  </section>
+
+</div>
+
+<!-- ================= SCRIPTS (ORDER FIXED) ================= -->
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/script.js"></script>
+<script src="js/verify-text.js"></script>
+
+</body>
+</html>
